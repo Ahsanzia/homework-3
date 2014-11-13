@@ -1,13 +1,13 @@
 var redditSvg;
 var previousData;
 
-var POLL_SPEED = 2000;
+var POLL_SPEED = 1000;
 
 function redditVis() {
   // setup a poll requesting data, and make an immediate request
   setInterval(requestData,POLL_SPEED);
   requestData();
-
+  
   // initial setup only needs to happen once 
   // - we don't want to append multiple svg elements
   redditSvg = d3.select("body")
@@ -27,6 +27,7 @@ function requestData() {
 /////////////////////////////////////
 
 function runVis(data) {
+//console.log(data);
 
   // d3 never does anything automagical to your data
   // so we'll need to get data into the right format, with the
