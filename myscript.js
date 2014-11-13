@@ -1,5 +1,5 @@
 var previousData;
-var POLL_SPEED = 5000;
+var POLL_SPEED = 2000;
 
 $( document ).ready(function() {
 redditVis();
